@@ -6,18 +6,19 @@ namespace spc_csharp
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Hello World!");
-      string name = "ObiWan";
-      // concatenation
-      Console.WriteLine("Hello, " + name);
-      // we can have arithmatic operations
-      Console.WriteLine(2 + 2 * 6);
+      // a declaration is a statement that tells the variable type
+      int declaration;
+      // the definition is a statement that declares the variable type, and set a value on it
+      int definition = 1;
 
-      // there are several types of variables, we seen string above ^
-      int number = 2;
-      float price = 3.99f;
+      // NOTE: both definition & declaration are done once
+      // no variable would be redeclared or redefined
 
-      Console.WriteLine(number * price);
+      declaration = definition + definition;
+
+      Console.WriteLine("Result is " + declaration);
+
+    //   Console.WriteLine("Hello world");
     }
   }
 }
