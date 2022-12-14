@@ -52,5 +52,14 @@ public class Program
         Console.WriteLine(isSunny);
         isSunny = (num1 != num2) || (num2 > num1); // or
         Console.WriteLine(isSunny);
+
+        // unary operator (enhanced if statement/short-form if-conditional)
+        string state;
+        // if (num1 < 0)
+        // { state = "solid"; }
+        // else
+        // { state = "liquid"; }
+        state = (num1 < 0) ? "ice" : (num1 > 100) ? "steam" : "liquid";
+        Console.WriteLine(state);
     }
 }
