@@ -9,6 +9,7 @@ namespace Classes
         {
             Human bond = new Human("James", "Bond");
             bond.IntroduceYourself();
+            bond = new Human(forename: "James", surname: "Bond", age: 64, eyeColour: "blue");
         }
     }
 }
