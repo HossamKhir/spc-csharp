@@ -2,26 +2,24 @@ using System;
 
 namespace Classes
 {
-    class Human
+    public class Human
     {
-        // INFO: both variables & functions inside a class are called members
-        // INFO: classes have something called access modifiers, that controls
-        //  what could be seen from outside the class scope, and how 
-        //  (if possible) could that be changed:
-        // the `public` modifier means the member is accessible from any given 
-        //  scope
-        // `private` means the member is only accessible inside the class or its 
-        //  children
-        // `protected` keeps the member accessible only by the class
+        private string _forename;
+        private string _surname;
 
-        // INFO: variables in classes are called attributes/properties
-        public string Forename;
-        public string Surname;
+        // INFO: by default, each class would have an empty default constructor
+        //  unless at one new constructor is defined
 
-        // INFO: functions inside classes are called methods/behaviour
+        // INFO: constructors have no return type, but they still do have access modifiers
+        public Human(string forename, string surname)
+        {
+            this._forename = forename;
+            this._surname = surname;
+        }
+
         public void IntroduceYourself()
         {
-            System.Console.WriteLine($"My name is {Surname}, {Forename} {Surname}!");
+            System.Console.WriteLine($"My name is {_surname}, {_forename} {_surname}!");
         }
     }
 }
