@@ -1,28 +1,25 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-int[,] matrix = {
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9},
+// INFO: jagged arrays syntax is similar to multi-dimensional arrays in C++
+// INFO: declare jagged array
+int[][] jaggedArr = new int[3][];
+
+// NOTE: jagged arrays could have arrays of different sizes
+jaggedArr[0] = new int[] { 2, 3, 5, 7, 11 };
+jaggedArr[1] = new int[3];
+jaggedArr[2] = new int[2];
+
+// NOTE: also jagged arrays could be defined
+int[][] jArr = new int[][] {
+    new int[] {3, 2},
+    new int[] {5, 10, 28},
 };
 
-// NOTE: foreach loop loops over each individual element, no matter the dimensions
-foreach (int num in matrix)
+foreach (var arr in jArr)
 {
-    Console.Write(num + " ");
-}
-Console.WriteLine();
-
-// NOTE: the `Length` property returns the flattened length, instead, the 
-//  `GetLength` method accepts an argument for the dimension
-// INFO: outer loop, over rows
-for (int row = 0; row < matrix.GetLength(0); ++row)
-{
-    // INFO: inner loop, over columns
-    for (int col = 0; col < matrix.GetLength(1); ++col)
+    // Console.WriteLine(arr);
+    foreach (var val in arr)
     {
-        matrix[row, col] *= -1;
-        Console.Write(matrix[row, col] + " ");
+        Console.WriteLine(val);
     }
-    Console.WriteLine();
 }
