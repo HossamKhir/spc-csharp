@@ -2,8 +2,8 @@
 Console.WriteLine("Hello, World!");
 int counter = 0;
 // INFO: general syntax
-while (counter < 10)
+do
 {
-    Console.WriteLine(counter);
-    counter++;
-}
+    System.Console.WriteLine(counter++);
+} while (counter < 10);
+// NOTE: the loop is guaranteed to run at least once
