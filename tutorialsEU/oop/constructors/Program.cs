@@ -1,14 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 // Console.WriteLine("Hello, World!");
 using System;
-
-namespace MembersC
+namespace Classes
 {
-    public static class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
-            Members m = new Members();
+            Human bond = new Human("James", "Bond");
+            bond.IntroduceYourself();
         }
     }
 }
