@@ -1,9 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-int counter = 0;
-// INFO: general syntax
-while (counter < 10)
+for (int index = 0; index < 10; ++index)
 {
-    Console.WriteLine(counter);
-    counter++;
+    if (index == 3)
+    {
+        System.Console.WriteLine("No 3 for you!");
+        continue; // skips the current iteration, and starts the next iteration
+    }
+    if (index == 6)
+    {
+        Console.WriteLine("You shall not pass!");
+        break; // exits from (breaks) the loop, and go outside it
+    }
+    Console.WriteLine(index);
 }
+Console.WriteLine("That's it, folks!");
